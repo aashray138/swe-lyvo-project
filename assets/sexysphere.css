@@ -1,0 +1,190 @@
+/********************************************/
+/***********Basic setup**********************/
+/*------------------------------------------*/
+
+*{
+	margin: 0px;
+	padding:0px;
+}
+
+body{
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+	color: black;
+}
+.content_body{
+	padding: 80px 80px 10px 200px;
+}
+
+ul{
+	list-style: none;
+}
+.resume_pt1{
+	float:left;
+	width: 60%;
+}
+
+
+.topic{
+	padding-bottom: 10px;
+}
+
+.intro{
+	padding-bottom: 5%;
+}
+.name, .address, .email, .phone{
+	padding-bottom: 3px;
+}
+
+
+.bio{
+	width: 80%;
+	padding-bottom: 3%;
+	text-align: justify;
+}
+
+.job_head{
+	padding-bottom: 10px;
+}
+.job_date{
+	padding-bottom: 10px;
+}
+.job_desc{
+	padding-bottom: 15px;
+}
+
+.education_history{
+	padding-bottom: 3%;
+}
+
+.edu{
+	padding-bottom: 10px;
+}
+.job_date{
+	font-weight: 500;
+	color: #F48C06;;
+}
+
+.resume_pt2{
+	float:left;
+}
+
+.honors_history, .skills_history, .hobbies_history,
+.lang_history{
+	padding-bottom: 15%;
+}
+
+
+/********************************************/
+/***********Icons****************************/
+/********************************************/
+
+i{
+	color: #F48C06;
+	padding-right: 7px;
+}
+/*progress{
+	width: 50%;
+	height: 15px;
+	color:#ffffff;
+	border: 1px solid #ccc;
+	-webkit-appearance: none;
+	overflow: hidden;
+	&::-webkit-progress-bar{
+		background:#F48C06;
+	}
+	&::-webkit-progress-value{
+		background: #aaa;
+	}
+}*/
+
+.progress-bar{
+	width: 100px;
+	height: 6px;
+	background-color: #F48C06;
+	border-radius: 2px;
+}
+
+
+
+/********************************************/
+/***********Personal Info********************/
+/********************************************/
+form{
+	width: 80%;
+}
+
+.row{
+	padding: 10px;
+}
+.personal_head{
+	text-transform: uppercase;
+}
+input{
+	height: 50px;
+	width: 40px;
+}
+.next_btn{
+	float: right;
+}
+.nx_btn{
+	height: 40px;
+	width: 80px;
+	background-color: #C6AC8F;
+	border: 0px;
+}
+
+/********************************************/
+/***********Experience***********************/
+/********************************************/
+#job_desc{
+	width: 100%;
+	height: 200px;
+}
+
+textarea[placeholder]{
+	padding: 10px;
+}
+
+/********************************************/
+/***********Education***********************/
+/********************************************/
+#select_form{
+	height: 50px;
+}
+
+#present_ed{
+	height: 15px;
+	width: 15px;
+}
+.attending{
+	float: right;
+	padding-right: 28%;
+}
+
+/********************************************/
+/***********Skills***************************/
+/********************************************/
+
+.add_btn{
+	display: block;
+	float:right;
+	padding-right: 28%;
+}
+
+.head_template{
+	padding-top: 3%;
+	text-align: center;
+}
+.template_design{
+	padding-left: 20%;
+}
+.tem_thumbnail{
+	width: 35%;
+	border: 1pt transparent;
+	transition: width, 0.2s, border, 0.2s;
+}
+.tem_thumbnail:hover{
+	width: 37%;
+	border: 1pt solid aqua;
+}

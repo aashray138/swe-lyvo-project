@@ -1,0 +1,59 @@
+body {
+    background-image: linear-gradient(to right, #C9D6FF, #E2E2E2);
+}
+
+input,
+textarea {
+    border: black solid 1px;
+}
+
+#basicInfo form {
+    text-align: center;
+    padding-top: 5%;
+}
+
+#experience form {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#experience input {
+    /* text-align: center; */
+    margin: 0px 5% 0px 5%;
+    margin-top: 0.5%;
+}
+
+#experience textarea {
+    margin-top: 2%;
+}
+
+#technicalProjects form {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#technicalProjects input {
+    margin: 0px 5% 0px 5%;
+}
+
+#technicalProjects textarea {
+    margin-top: 1%;
+}
+
+#education form {
+    text-align: center;
+    padding-top: 3%;
+}
+
+#education input {
+    margin: 0px 5% 0px 5%;
+}
+
+#education textarea {
+    margin-top: 1%;
+}
+
+.header {
+    text-align: center;
+    color: black;
+}
