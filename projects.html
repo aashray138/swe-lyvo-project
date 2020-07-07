@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Personal Info</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
@@ -16,7 +16,7 @@
         <span class="navbar-toggle" id="js-navbar-toggle">
         <i class="fa fa-bars" style="padding-top: 7px;"></i>
       </span>
-        <a href="#home" class="logo">
+        <a href="index.html" class="logo">
             <img src="./assets/logo.png" style="width: 280px; height: 50px; margin-left: 0; float: left;" ; /></a>
 
         <ul class="main-nav" id="js-menu">
@@ -46,72 +46,67 @@
 
     <div class="content_body">
         <div class="headline">
-            <h2 class="personal_head">Personal Info</h2>
+            <h2 class="personal_head">Projects</h2>
             <p class="head_text">
-                It is important for employers to know about you.
+                Add your Projects from the latest to the earliest.
             </p>
         </div>
 
         <div class="form">
-            <form action="connectsql.php" method="post">
+            <form action="projects_connect.php" method="POST">
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="fname" class="form-control" placeholder="First name" />
-                    </div>
-                    <div class="col">
-                        <input type="text" name="lname" class="form-control" placeholder="Last name" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" name="add" class="form-control" placeholder="Address" />
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" name="city" class="form-control" placeholder="City" />
-                    </div>
-                    <div class="col">
-                        <input type="text" name="state" class="form-control" placeholder="State" />
-                    </div>
-                    <div class="col">
-                        <input type="number" name="zcode" class="form-control" placeholder="Zip code" />
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col">
-                        <input type="email" name="email" class="form-control" placeholder="Email address" />
-                    </div>
-                    <div class="col">
-                        <input type="number" name="phone" class="form-control" placeholder="Phone" />
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col">
-                        <input type="text" name="github" class="form-control" placeholder="Github Username" />
-                    </div>
-                    <div class="col">
-                        <input type="text" name="linkedin" class="form-control" placeholder="LinkedIn Username" />
+                        <div class="label"> Title </div>
+                        <input type="text" name="pname" class="form-control" placeholder="Title" />
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <input type="text" name="profile_title" class="form-control" placeholder="Professional Title" />
+                        <div class="label"> Date</div>
+                        <input type="year" name="pdate" class="form-control" placeholder="Start Year" maxlength="4" />
+                    </div>
+                    <div class="col">
+                        <div class="label"> Technologies Used </div>
+                        <input type="year" name="ptech" class="form-control" placeholder="eg: php, html, java, react" maxlength="100" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="label"> Description </div>
+                        <textarea id="job_desc" name="pdesc" placeholder="Job Description"></textarea>
+                    </div>
+                </div>
+
+
+                <h2> PROJECT </h2>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="label"> Title </div>
+                        <input type="text" name="pname1" class="form-control" placeholder="Title" />
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
-                        <textarea id="job_desc" name="profile" placeholder="Professional Summary - Minimum 120 characters, Max 200 characters" minlength="120" maxlength="200"></textarea>
+                        <div class="label"> Date</div>
+                        <input type="year" name="pdate1" class="form-control" placeholder="Start Year" maxlength="4" />
+                    </div>
+                    <div class="col">
+                        <div class="label"> Technologies Used </div>
+                        <input type="year" name="ptech1" class="form-control" placeholder="eg: php, html, java, react " maxlength="100 " />
                     </div>
                 </div>
-                <div class="row next_btn">
-                    <button class="nx_btn" name="submit" type="submit">Next</button>
+                <div class="row">
+                    <div class="col">
+                        <div class="label"> Description </div>
+                        <textarea id="job_desc" name="pdesc1" placeholder="Job Description"></textarea>
+                    </div>
+                </div>
+
+                <div class="row next_btn ">
+                    <button class="nx_btn " type="submit ">Next</button>
                 </div>
             </form>
         </div>

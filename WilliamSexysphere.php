@@ -28,9 +28,7 @@ if($num_rows>0){
          echo '<h2 class="name">'.$row['fname'].' '.$row['lname'].'</h2>';
             echo '<p class="address">
                 <i class="fas fa-location-arrow"></i>'.$row['address'].','.$row['city'].','.$row['state'];
-                 echo '<p>
-                    <p class="email">
-                        <i class="fas fa-envelope"></i>'.$row['email'];
+                 echo '<p>  <p class="email"> <i class="fas fa-envelope"></i>'.$row['email'];
                     echo '</p>
                     <p class="phone">
                         <i class="fas fa-phone-alt"></i>'.$row['phone'];
