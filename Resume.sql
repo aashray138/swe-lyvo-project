@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 04, 2020 at 11:16 PM
+-- Generation Time: Jul 07, 2020 at 05:06 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -30,14 +30,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `education` (
   `cid` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `city` varchar(100) NOT NULL,
-  `state` varchar(50) NOT NULL,
-  `degree` varchar(50) NOT NULL,
-  `course` varchar(50) NOT NULL,
-  `grad_date` date NOT NULL,
-  `attend` enum('present','not') NOT NULL
+  `name` varchar(100) DEFAULT NULL,
+  `field` varchar(100) DEFAULT NULL,
+  `degree` varchar(100) DEFAULT NULL,
+  `date` int(4) DEFAULT NULL,
+  `classes` varchar(120) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `education`
+--
+
+INSERT INTO `education` (`cid`, `name`, `field`, `degree`, `date`, `classes`) VALUES
+(4, 'Harry@hogwarts.com', 'Harry@hogwarts.com', 'Harry@hogwarts.com', 2020, 'Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com'),
+(5, 'FHBEJRFBJHRBSHJFV', 'HJVSFJHDVHCJSVHJV', 'VGHVJHSDVHJVSHJQVHJVFJSHV', 3675, ' VJXBC VJSH VS JSHJV HJS VJDFV FH VF'),
+(6, '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', 2021, '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -51,10 +58,28 @@ CREATE TABLE `job` (
   `title` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
   `state` varchar(10) NOT NULL,
-  `start_date` date NOT NULL,
-  `end_date` date NOT NULL,
-  `description` varchar(200) NOT NULL
+  `start_date` year(4) NOT NULL,
+  `end_date` year(4) NOT NULL,
+  `description` varchar(200) NOT NULL,
+  `employer1` varchar(200) DEFAULT NULL,
+  `title1` varchar(200) DEFAULT NULL,
+  `city1` varchar(100) DEFAULT NULL,
+  `state1` varchar(100) DEFAULT NULL,
+  `description1` varchar(200) DEFAULT NULL,
+  `end_date1` year(4) DEFAULT NULL,
+  `start_date1` year(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `job`
+--
+
+INSERT INTO `job` (`cid`, `employer`, `title`, `city`, `state`, `start_date`, `end_date`, `description`, `employer1`, `title1`, `city1`, `state1`, `description1`, `end_date1`, `start_date1`) VALUES
+(4, 'HELLO', 'HELLO', 'HELLO', 'HEKKI', 2020, 2030, '39IR23I9U243087238946982634986326472346723462YUGSDUC VDHJFVCGDSKCVGHDV CHD S', 'HDBVEWHVHV', 'HVUHV', 'VUGVUGV', 'UGVUGV', 'HEBWHBCHS CJKHS DFHJV SFJHBVHJSFDV S', 2020, 2020),
+(4, 'a', 'a', 'a', 'a', 2020, 2020, 'kjdbqiwubdbwrfbche fhkbehrbvjhrbvhjkbvdjhbvhjdfbvhjbdfvjhdbjhvdbvjhdbfhjd', 'gfgu', 'vuv', 'uvuv', 'uyv', 'vvgvbsdhjvbhsbdfvsndfvjhsbhjfvbshfjdbvjhsdfbvjhsbfdjhvbsjhfbvshjbvjsd fvjhsksdjhfbvjhsdbvkjhsdbfvjhsdbvjhbsjkvsdf', 2020, 2020),
+(5, 'ugygyug', 'guygyu', 'gyugy', 'guyg', 2011, 2011, 'skhdbvihsbhbshvbhj', 'dskbcishdbcv', 'vhjfvdshvhsvhv', 'vhfjvsdhjsjhvhj', 'jhvdsjhvshjvchjs', 'fwuegvuywvchuvhsvdcgvsdvcuvuwyvuwe', 2011, 2011),
+(6, '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pna', 2020, 2020, '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pn', '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', 2020, 2020),
+(6, '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pna', 2020, 2020, '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pn', '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', 2020, 2020);
 
 -- --------------------------------------------------------
 
@@ -72,8 +97,47 @@ CREATE TABLE `personal_info` (
   `email` varchar(50) NOT NULL,
   `phone` varchar(20) NOT NULL,
   `profile` varchar(200) NOT NULL,
-  `zcode` int(11) NOT NULL
+  `zcode` int(11) NOT NULL,
+  `github` varchar(100) DEFAULT NULL,
+  `linkedin` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `personal_info`
+--
+
+INSERT INTO `personal_info` (`cid`, `fname`, `lname`, `address`, `city`, `state`, `email`, `phone`, `profile`, `zcode`, `github`, `linkedin`) VALUES
+(1, 'A', 'B', 'c', 'f', 'f', 'f@gmail.cpm', '54564', 'f@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpm', 1, 'f@gmail.cpm', '123'),
+(2, 'f@gmail.cpm', 'f@gmail.cpm', 'f@gmail.cpm', 'f@gmail.cpm', 'f@gmail.cpm', 'f@gmail.cpm', '222', 'f@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpmf@gmail.cpm', 11, 'f@gmail.cpm', 'f@gmail.cpm'),
+(3, 'Harry', 'Potter', '822 Surrey Road', 'Surryy', 'Liverpool', 'harry@hogwarts.com', '999999999', 'WIZARD WHO KILLED VOLDEMORT. EXPECTRO PATRONUS. \r\nWIZARD WHO KILLED VOLDEMORT. EXPECTRO PATRONUS. WIZARD WHO KILLED VOLDEMORT. EXPECTRO PATRONUS', 312, 'harry@hogwarts.com', 'harry@hogwarts.com'),
+(4, 'Harry', 'Harry', 'Harry', 'Harry', 'Harry', 'Harry@hogwarts.com', '12436278', 'Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com Harry@hogwarts.com', 123, 'Harry@hogwarts.com', 'Harry@hogwarts.com'),
+(5, 'Aashray', 'Shrestha', '839 w wALNUT sT', 'BDFKJBJ', 'JHVJH', 'JV2EVUIBEUI@FJKHSBCDJ.VOMQ', '178367871', 'DFVIDBKVJBD FHBVHBFDVHERBFKVBSFHJBVHJESBDFHBERHSHBVEHJRDBFVHBHDBVIHBIURIHIUHIUHJVUGFHJBJBHJBHKJBJHJBHJBJKBJKBBKJBKBKJBBKJBKJBJK', 387642, 'FKHV@FKS.CM', 'BNEWJFBJBC@KNSDKNC.COM'),
+(6, '$pname ', '$pname ', '$pname ', '$pname ', '$pname ', '$pname@gmail.com', '12321312', '$pname@gmail.com v$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', 2332, '$pname@gmail.com', '$pname@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `pname` varchar(100) DEFAULT NULL,
+  `pdate` int(4) DEFAULT NULL,
+  `ptech` varchar(120) DEFAULT NULL,
+  `pdesc` varchar(200) DEFAULT NULL,
+  `pname1` varchar(100) DEFAULT NULL,
+  `pdate1` int(4) DEFAULT NULL,
+  `ptech1` varchar(120) DEFAULT NULL,
+  `pdesc1` varchar(200) DEFAULT NULL,
+  `cid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`pname`, `pdate`, `ptech`, `pdesc`, `pname1`, `pdate1`, `ptech1`, `pdesc1`, `cid`) VALUES
+('$pname@gmail.com', 2020, '$pname@gmail.com', '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', '$pname@gmail.com', 2020, '$pname@gmail.com$pname@gmail.com$pname@gmail.com', '$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com$pname@gmail.com', 6);
 
 -- --------------------------------------------------------
 
@@ -83,9 +147,34 @@ CREATE TABLE `personal_info` (
 
 CREATE TABLE `skills` (
   `cid` int(11) NOT NULL,
-  `skill` varchar(200) NOT NULL,
-  `level` varchar(100) NOT NULL
+  `award1` varchar(100) DEFAULT NULL,
+  `award2` varchar(100) DEFAULT NULL,
+  `award3` varchar(100) DEFAULT NULL,
+  `award4` varchar(100) DEFAULT NULL,
+  `skill1` varchar(100) DEFAULT NULL,
+  `skill_level1` varchar(100) DEFAULT NULL,
+  `skill2` varchar(100) DEFAULT NULL,
+  `skill_level2` varchar(100) DEFAULT NULL,
+  `skill3` varchar(100) DEFAULT NULL,
+  `skill_level3` varchar(100) DEFAULT NULL,
+  `skill4` varchar(100) DEFAULT NULL,
+  `skill_level4` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `skills`
+--
+
+INSERT INTO `skills` (`cid`, `award1`, `award2`, `award3`, `award4`, `skill1`, `skill_level1`, `skill2`, `skill_level2`, `skill3`, `skill_level3`, `skill4`, `skill_level4`) VALUES
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 'dsnfihbi', 'iygyg', 'yg', 'uyguy', 'fuhwiue`', 'Novice', 'kjbhjb', 'Skilled', 'bihjbib', 'Novice', 'giu', 'Beginner'),
+(5, 'VSMD VKJSDBKJBkhbkhvdbvkBVv', 'ycgvjhvhvh', 'vhjvhjvhjvhjv', 'hvjhhjvjhvjh', 'KJRBFKJHBHBV', 'Beginner', 'JDBF VDKJV KSD', 'Beginner', 'DKVBSJBDJKVS', 'Novice', 'SVCKND BVKJS D', 'Novice'),
+(6, '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', '$pname@gmail.com', 'Expert', '$pname@gmail.com', 'Beginner', '$pname@gmail.com', 'Skilled', '$pname@gmail.com', 'Skilled');
 
 --
 -- Indexes for dumped tables
@@ -110,6 +199,12 @@ ALTER TABLE `personal_info`
   ADD PRIMARY KEY (`cid`);
 
 --
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD KEY `cid` (`cid`);
+
+--
 -- Indexes for table `skills`
 --
 ALTER TABLE `skills`
@@ -123,7 +218,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT for table `personal_info`
 --
 ALTER TABLE `personal_info`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

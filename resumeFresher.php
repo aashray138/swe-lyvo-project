@@ -37,10 +37,10 @@
             <div class="col-md-3">
                 <h4 id="Contact" style="margin-top: 7%;"> Contact</h4>
 
-                <h5 id="emailAddress" class="fa fa-envelope padNone">  <?php echo $_POST["email"]; ?> </h5> <br/>
-                <h5 id="phoneNumber" class="fa fa-phone"> <?php echo $_POST["phone"]; ?></h5><br/>
-                <h5 id="gitHub" class="fa fa-github"> <?php echo $_POST["linkedin"]; ?> </h5><br/>
-                <h5 id="linkedIn" class="fa fa-linkedin"> <?php echo $_POST["github"]; ?> </h5><br/>
+                <h5 id="emailAddress" class="fa fa-envelope padNone">  </h5> <br/>
+                <h5 id="phoneNumber" class="fa fa-phone"> </h5><br/>
+                <h5 id="gitHub" class="fa fa-github">  </h5><br/>
+                <h5 id="linkedIn" class="fa fa-linkedin"> </h5><br/>
             </div>
         </div>
     </div>
@@ -123,7 +123,8 @@
                 <h4 id=" education " class="fa iconButton "> PROJECTS </h4> <br/>
                 <div class="padZero">
                     <h4 id="projectName1 "> Name of Project </h4>
-                    <p class="fa fa-calendar"> YYYY </p>
+                    <p class="fa fa-calendar"> YYYY </p> <br/>
+                    <p class="fa fa-files-o" style="font-weight:bold "> techUsed </p>
                     <ul class="padZero">
                         <li> Responsibilites</li>
                         <li> Responsibilites</li>
