@@ -17,4 +17,4 @@ $user_registration_query="insert into projects(cid,pname,pdate,ptech,pdesc,pname
                                          ('$cid','$pname','$pdate','$ptech','$pdesc','$pname1','$pdate1','$ptech1','$pdesc1')";
 $user_registration_result=mysqli_query($con,$user_registration_query) or die(mysqli_error($con));
 ?>
-<meta http-equiv="refresh" content="3;url=resumeFresher.php "/>
+ <meta http-equiv="refresh" content="3;url=resumePage.php" />
