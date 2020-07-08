@@ -11,7 +11,7 @@ $cid= $_SESSION['cId'];
     <title>Sexysphere</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./assets/sexysphere.css">
+    <link rel="stylesheet" type="text/css" href="./assets/william.css">
 </head>
 
 <body>
